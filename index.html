@@ -6,7 +6,7 @@
   Before you deploy this file, do three quick things:
   1. Replace the two "https://your-portfolio-url.com/" placeholders (canonical + og:url) with your real hosted URL.
   2. Add a "resume.pdf" file next to this one and confirm the "Resume" button works.
-  3. Swap the three placeholder cards in the Work section for your real projects.
+  3. Add real "Live demo" / "Source" links to the two project cards in the Work section once your repos are public.
 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -276,7 +276,7 @@
   .pill:hover{ background:var(--ink); color:var(--paper); }
 
   /* ---------- WORK ---------- */
-  .work-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line); }
+  .work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line); }
   .work-card{
     border-right:1px solid var(--line); border-bottom:1px solid var(--line);
     padding:30px 28px; display:flex; flex-direction:column; height:100%;
@@ -286,6 +286,12 @@
   .work-index{ font-family:var(--font-display); font-weight:800; font-size:1.6rem; color:var(--line-strong); }
   .work-card h3{ font-size:1.3rem; font-weight:800; margin-top:14px; }
   .work-card p{ color:var(--ink-soft); font-size:.92rem; margin-top:10px; flex:1; }
+  .work-list{ margin-top:12px; flex:1; }
+  .work-list li{
+    display:flex; align-items:flex-start; gap:10px;
+    color:var(--ink-soft); font-size:.92rem; line-height:1.55; padding:5px 0;
+  }
+  .work-list li::before{ content:'•'; flex:none; color:var(--ink-soft); }
   .work-tags{ display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
   .tag-sm{ font-size:.72rem; font-weight:600; border:1px solid var(--line-strong); padding:5px 10px; }
   .work-links{ display:flex; gap:18px; margin-top:auto; }
@@ -566,42 +572,38 @@
       </div>
     </div>
 
-    <!-- Replace these three placeholder cards with your real projects, links and descriptions. -->
     <div class="work-grid reveal">
       <article class="work-card">
         <span class="work-index">01</span>
-        <h3>Project title here</h3>
-        <p>Briefly describe the problem you solved, your approach and the result. Swap this text for one of your own data science or Python projects.</p>
-        <div class="work-tags"><span class="tag-sm">Python</span><span class="tag-sm">Pandas</span><span class="tag-sm">Add tag</span></div>
+        <h3>Flipkart Mobile Phones Web Scraper</h3>
+        <ul class="work-list">
+          <li>Developed a Python web scraper using BeautifulSoup and Requests to extract mobile phone listing data from Flipkart.</li>
+          <li>Processed HTML content to identify and extract relevant product fields such as name, price, and ratings.</li>
+          <li>Structured and saved the scraped data into CSV format for further use and analysis.</li>
+          <li>Applied problem-solving skills to handle inconsistent page structures during the scraping process.</li>
+          <li>Published the project code on GitHub.</li>
+        </ul>
+        <div class="work-tags"><span class="tag-sm">Python</span><span class="tag-sm">BeautifulSoup</span><span class="tag-sm">Requests</span></div>
         <div class="work-links">
-          <a href="#">Live demo →</a>
           <a href="#">Source →</a>
         </div>
       </article>
 
       <article class="work-card">
         <span class="work-index">02</span>
-        <h3>Project title here</h3>
-        <p>Add a project that shows off your data analysis or visualization skills — Matplotlib and Seaborn work well here.</p>
-        <div class="work-tags"><span class="tag-sm">NumPy</span><span class="tag-sm">Matplotlib</span><span class="tag-sm">Add tag</span></div>
+        <h3>Makeup Dataset Analysis</h3>
+        <ul class="work-list">
+          <li>Performed exploratory data analysis (EDA) on a makeup/cosmetics product dataset using Pandas and NumPy.</li>
+          <li>Cleaned and processed raw data to handle missing values and inconsistencies prior to analysis.</li>
+          <li>Created visualizations with Matplotlib and Seaborn to explore trends and relationships within the dataset.</li>
+          <li>Applied statistical concepts to interpret patterns and summarize key findings from the data.</li>
+        </ul>
+        <div class="work-tags"><span class="tag-sm">Python</span><span class="tag-sm">Pandas</span><span class="tag-sm">NumPy</span><span class="tag-sm">Matplotlib</span><span class="tag-sm">Seaborn</span></div>
         <div class="work-links">
-          <a href="#">Live demo →</a>
-          <a href="#">Source →</a>
-        </div>
-      </article>
-
-      <article class="work-card">
-        <span class="work-index">03</span>
-        <h3>Project title here</h3>
-        <p>A great third slot for a Git/GitHub-based project or a small machine learning model you trained end to end.</p>
-        <div class="work-tags"><span class="tag-sm">Git</span><span class="tag-sm">Scikit-learn</span><span class="tag-sm">Add tag</span></div>
-        <div class="work-links">
-          <a href="#">Live demo →</a>
           <a href="#">Source →</a>
         </div>
       </article>
     </div>
-    <p class="placeholder-note">These are placeholder projects — replace them with your own repositories, notebooks or dashboards once ready.</p>
   </div>
 </section>
 
